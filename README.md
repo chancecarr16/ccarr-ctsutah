@@ -13,7 +13,7 @@
 
 ```ruby
 def my_great_method
-  putes "here it is"
+  puts "here it is"
 end
 ```
 ```javascript
