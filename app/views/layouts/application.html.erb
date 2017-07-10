@@ -14,18 +14,27 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render partial: "shared/nav", locals: {location: 'top'} %>
+    <div class="site-wrapper">
 
-    <%= login_helper %>
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+    
+          <%= render "shared/application_nav" %>
       
-    <%= yield %>
-    
-    <%= @copyright %>
-    
-    <%= source_helper ("application")%>
-  
+          <%= login_helper %>
+            
+          <%= yield %>
+          
+          <%= @copyright %>
+          
+          <%= source_helper ("application") %>
+          
+        </div>
+
+      </div>
+
+    </div>
+
   </body>
 </html>
