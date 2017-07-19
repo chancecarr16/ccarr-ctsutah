@@ -68,7 +68,7 @@ module ApplicationHelper
   end
   
   def alert_generator msg
-    js add_gritter(msg, :title => "Chance Carr's Portfolio", sticky: false, time: 3000)
+    js add_gritter(msg, :title => "Portfolio Notification", sticky: false, time: 3000)
   end
 
 end
