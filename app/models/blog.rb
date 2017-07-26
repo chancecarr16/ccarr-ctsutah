@@ -7,7 +7,7 @@ class Blog < ApplicationRecord
     where(status: draft)
   end
   
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
   
   belongs_to :topic
   
