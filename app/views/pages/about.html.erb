@@ -1,17 +1,79 @@
-<h1>About Me</h1>
+<div class="app-card-container">
+  <div class="card">
+    <h1>About Me</h1>
+    
+    <hr>
+    
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "realangerbirb.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+     
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">            
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div 
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                >
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-<hr>
-
-<!--
-(I will fill this with a profile image later)
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag "river.jpg", width: 300, alt: "Profile Image" %>
-  </div>
-  (ALSO!!! Make sure to change the number of columns per div. image should have 8 and text should have 4.)
--->
-  
-  <div class="col-md-12">
-      <p>My name is Chance Carr.  I am living in Provo, Utah.  I am 14 years old and will soon be a Sophomore at Timpview High School.  At the moment, I am spending my summer learning how to code, playing videogames, and working odd jobs.</p>
+      
+      <div class="col-md-8">
+          <p>My name is Chance Carr.  I am living in Provo, Utah.  I am 14 years old and will soon be a Sophomore at Timpview High School.  At the moment, I am spending my summer learning how to code, playing videogames, and working odd jobs.</p>
+          
+          <p>
+            <button
+             class="btn btn-primary"
+             type="button"
+             data-toggle="collapse"
+             data-target="#jobHistory"
+             aria-expanded="false"
+             aria-controller="jobHistory"
+            >
+              Job History
+            </button>
+            <button
+             class="btn btn-primary"
+             type="button"
+             data-toggle="collapse"
+             data-target="#education"
+             aria-expanded="false"
+             aria-controller="education"
+            >
+              Education
+            </button>
+          </p>
+          <p>
+            <div class="collapse" id="education">
+              <div class="card card-block">
+                Currently a Sophomore in High School
+              </div>
+              <div class="card card-block">
+                Graduate of the Utah Valley CTS program
+              </div>
+            </div> 
+          </p>
+          <p>
+            <div class="collapse" id="jobHistory">
+              <div class="card card-block">
+                Job 1
+              </div>
+              <div class="card card-block">
+                Job 2
+              </div>
+            </div>
+          </p>
+        </div>
     </div>
+  </div>
 </div>
