@@ -28,9 +28,21 @@ User.create!(
 
 puts "Second (More professional) Admin user created"
 
-3.times do |topic|
+1.times do |topic|
     Topic.create!(
-      title: "Topic #(topic)"
+      title: "Projects"
+      )
+end
+
+1.times do |topic|
+    Topic.create!(
+      title: "Personal"
+      )
+end
+
+1.times do |topic|
+    Topic.create!(
+      title: "Other"
       )
 end
 
@@ -58,7 +70,7 @@ puts "5 skills created"
 8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "Ruby on Rails",
+    subtitle: "",
     body: "Etiam rhoncus mi efficitur ex tempor finibus. Nunc interdum ornare lorem, non posuere lorem efficitur eget. Suspendisse sit amet lorem diam. In mollis lacus quis purus vehicula lobortis. Quisque pulvinar porttitor lacinia. Cras nec ante id urna ultricies porta. Phasellus sodales sagittis turpis, non efficitur velit sollicitudin sit amet. In hac habitasse platea dictumst.",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
@@ -68,7 +80,7 @@ end
 1.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
-    subtitle: "Angular",
+    subtitle: "",
     body: "Etiam rhoncus mi efficitur ex tempor finibus. Nunc interdum ornare lorem, non posuere lorem efficitur eget. Suspendisse sit amet lorem diam. In mollis lacus quis purus vehicula lobortis. Quisque pulvinar porttitor lacinia. Cras nec ante id urna ultricies porta. Phasellus sodales sagittis turpis, non efficitur velit sollicitudin sit amet. In hac habitasse platea dictumst.",
     main_image: "http://via.placeholder.com/600x400",
     thumb_image: "http://via.placeholder.com/350x200"
@@ -76,9 +88,3 @@ end
 end
 
 puts "9 portfolio items created"
-
-3.times do |technology|
-  Portfolio.last.technologies.create!(name: "Technology #{technology}")
-end
-
-puts "3 technologies created"
